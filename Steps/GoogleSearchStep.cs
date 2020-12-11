@@ -23,9 +23,9 @@ namespace GoogleTest.Steps
         }
 
         [Then(@"I see Google page is loaded")]
-        public Boolean IsGooglePageLoaded()
+        public void IsGooglePageLoaded()
         {
-            return false;
+            
         }
         //Given I navigate to website "https://www.google.com"
         //Then I see Google page is loaded
