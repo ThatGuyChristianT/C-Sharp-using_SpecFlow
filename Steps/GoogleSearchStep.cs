@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,13 @@ namespace GoogleTest.Steps
     [Binding]
     class GoogleSearchStep
     {
+        IWebDriver driver = null;
         [Given(@"I navigate to website '(.*)'")]
         public void NavigateBrowser(string browser)
         {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl(browser);
+            System.Threading.Thread.Sleep(5000);
 
         }
 
